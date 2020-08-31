@@ -65,10 +65,11 @@
   box-shadow: none;
 }
 .heroForm label {
-  display: block;
   font-size: 1.2rem;
 }
-.heroForm input {
+.heroForm input[type="text"],
+.heroForm input[type="tel"],
+.heroForm input[type="email"] {
   display: block;
   width: 100%;
 }
