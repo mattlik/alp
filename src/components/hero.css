@@ -65,7 +65,12 @@
   box-shadow: none;
 }
 .heroForm label {
+  display: block;
   font-size: 1.2rem;
+}
+.heroForm input {
+  display: block;
+  width: 100%;
 }
 
 @media (min-width: 800px) {

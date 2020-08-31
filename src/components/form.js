@@ -36,53 +36,78 @@ class Form extends React.Component {
   onSubmit = e => {
     e.preventDefault()
     let checkArray = []
+    let nameField = document.getElementById("name").value
+    let phoneField = document.getElementById("phone").value
+    let emailField = document.getElementById("email").value
+    let zipField = document.getElementById("zip").value
+    let howField = document.getElementById("how").value
+    let messageField = document.getElementById("message").value
     for (var key in this.state) {
       if (this.state[key] === true) {
         checkArray.push(key)
       }
     }
-    let checkData = {
+
+    let formData = {
       checkbox: checkArray.toString(),
+      name: nameField.toString(),
+      phone: phoneField.toString(),
+      email: emailField.toString(),
+      zip: zipField,
+      how: howField,
+      message: messageField,
     }
+
+    console.log(formData)
+
     axios
-      .post("http://localhost:4000/api/checkbox-save", checkData)
+      .post("http://localhost:4000/api/form-save", formData)
       .then(res => {
         console.log(res.data)
+        window.location = "/thankyou"
       })
       .catch(error => {
         console.log(error)
+        console.log("error")
       })
   }
+
   onChangeEmergency = () => {
     this.setState(initialState => ({
       emergency: !initialState.emergency,
     }))
   }
+
   onChangeLeak = () => {
     this.setState(initialState => ({
       leak: !initialState.leak,
     }))
   }
+
   onChangeWater = () => {
     this.setState(initialState => ({
       water: !initialState.water,
     }))
   }
+
   onChangeDrain = () => {
     this.setState(initialState => ({
       drain: !initialState.drain,
     }))
   }
+
   onChangeNodig = () => {
     this.setState(initialState => ({
       nodig: !initialState.nodig,
     }))
   }
+
   onChangeOther = () => {
     this.setState(initialState => ({
       other: !initialState.other,
     }))
   }
+
   render() {
     return (
       <form onSubmit={this.onSubmit}>
@@ -158,7 +183,7 @@ class Form extends React.Component {
           </div>
           <div className="inputField submitField">
             <input
-              class="btn"
+              className="btn"
               type="button"
               id="next"
               value="Find My Plumber"
@@ -168,8 +193,36 @@ class Form extends React.Component {
         </div>
         <div id="secondSlide" style={{ display: `none` }}>
           <div className="inputField">
-            <label htmlFor="emergency">Name</label>
+            <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name"></input>
+          </div>
+          <div className="inputField">
+            <label htmlFor="phone">Phone</label>
+            <input type="tel" id="phone" name="phone"></input>
+          </div>
+          <div className="inputField">
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email"></input>
+          </div>
+          <div className="inputField">
+            <label htmlFor="zip">Zip</label>
+            <input type="text" id="zip" name="zip"></input>
+          </div>
+          <div className="inputField">
+            <label htmlFor="how">How did you hear about us?</label>
+            <input type="text" id="how" name="how"></input>
+          </div>
+          <div className="inputField">
+            <label htmlFor="message">Any additional notes?</label>
+            <input type="text" id="message" name="message"></input>
+          </div>
+          <div className="inputField submitField">
+            <input
+              className="btn"
+              type="submit"
+              id="submit"
+              value="Submit"
+            ></input>
           </div>
         </div>
       </form>
