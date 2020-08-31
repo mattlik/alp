@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
+import "../components/layout.css"
 import "../styles/default.css"
 
 const Layout = ({ children }) => (
@@ -26,9 +27,11 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <div
+        /*
           style={{
             padding: "0 1rem",
           }}
+          */
         >
           <main>{children}</main>
         </div>

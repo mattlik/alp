@@ -1,7 +1,9 @@
 import React from "react"
 
+import Button from "../components/button"
 import feature from "../images/feature.png"
 import SectionHeader from "./section-header"
+import mockupFrame from "../images/mockup-frame.png"
 import { COLORS } from "../styles/constants"
 
 const Content = () => (
@@ -27,6 +29,13 @@ const Content = () => (
       </div>
       <div>
         <img src={feature} alt="a blank card floating over colorful graphics" />
+        <div>
+          <img
+            src={mockupFrame}
+            alt="outlines of shapes and confetti in the background "
+          />
+          <Button>Get Early Access</Button>
+        </div>
       </div>
     </content>
   </div>
