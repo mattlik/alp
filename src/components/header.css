@@ -6,13 +6,6 @@
   margin: 0 0 -1px;
   padding: 1rem 0;
 }
-.container {
-  width: 996px;
-  max-width: 100%;
-  padding: 0 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 .pageHeader--Title span {
   display: block;
   line-height: 1.2;

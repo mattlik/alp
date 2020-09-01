@@ -51,6 +51,10 @@
 .inputField {
   padding-bottom: 0.5rem;
 }
+.inputField input,
+.inputField.checkbox label {
+  cursor: pointer;
+}
 .submitField {
   margin-top: 1rem;
   text-align: center;

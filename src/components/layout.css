@@ -1,3 +1,15 @@
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-yellow {
+  color: #efea5d;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -14,10 +26,43 @@
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
   transition: all 180ms ease-out;
 }
+
 .btn:hover {
   transform: translateY(1px);
   color: #1d1d1d;
   background: #d6d020;
   border-radius: 3px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 996px;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-row {
+  flex-direction: column;
+}
+
+.section-padding {
+  padding: 2rem 1rem;
+}
+.grid-2 > * > *:first-child {
+  margin-top: 1rem;
+}
+@media (min-width: 540px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    align-items: center;
+  }
+  .grid-2 > * {
+    padding: 1rem;
+  }
+  .grid-2 > * > *:first-child {
+    margin-top: 0;
+  }
 }

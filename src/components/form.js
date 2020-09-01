@@ -112,10 +112,10 @@ class Form extends React.Component {
     return (
       <form onSubmit={this.onSubmit}>
         <div id="firstSlide">
-          <h2 style={{ textAlign: "center" }}>
+          <h2 className="text-center">
             What type of plumbing project is this?
           </h2>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.emergency}
               onChange={this.onChangeEmergency}
@@ -126,7 +126,7 @@ class Form extends React.Component {
             ></input>
             <label htmlFor="emergency">Emergency Plumbing</label>
           </div>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.leak}
               onChange={this.onChangeLeak}
@@ -137,7 +137,7 @@ class Form extends React.Component {
             ></input>
             <label htmlFor="leak">Leak Detection &amp; Repair</label>
           </div>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.water}
               onChange={this.onChangeWater}
@@ -148,7 +148,7 @@ class Form extends React.Component {
             ></input>
             <label htmlFor="water">Water Heater Inpection</label>
           </div>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.drain}
               onChange={this.onChangeDrain}
@@ -159,7 +159,7 @@ class Form extends React.Component {
             ></input>
             <label htmlFor="drain">Drain Cleaning</label>
           </div>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.nodig}
               onChange={this.onChangeNodig}
@@ -170,7 +170,7 @@ class Form extends React.Component {
             ></input>
             <label htmlFor="nodig">No Dig Relining</label>
           </div>
-          <div className="inputField">
+          <div className="inputField checkbox">
             <input
               checked={this.state.other}
               onChange={this.onChangeOther}
