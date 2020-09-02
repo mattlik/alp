@@ -61,7 +61,7 @@ class Form extends React.Component {
     console.log(formData)
 
     axios
-      .post("https://alp-nu.vercel.app/api/form-save", formData)
+      .post("/api/form-save", formData)
       .then(res => {
         console.log(res.data)
         window.location = "/thankyou"
