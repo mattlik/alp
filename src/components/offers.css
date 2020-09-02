@@ -13,6 +13,11 @@
   display: block;
   text-align: center;
 }
+
+.offer h3 .top-bg {
+  display: inline;
+}
+
 .offer h3 .offer-text--big {
   font-size: 90px;
   vertical-align: text-top;
@@ -25,7 +30,7 @@
   transform: translateX(-5px) translateY(-0.7rem);
 }
 .offer h3 .offer-text--middle {
-  font-size: 27px;
+  font-size: 26px;
   margin-bottom: 0.5rem;
 }
 .offer h3 .offer-text--bottom {
@@ -41,7 +46,8 @@
     display: -ms-grid;
     display: grid;
     grid-gap: 0.5rem;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-    grid-template-columns: repeat(auto-fill, minmax(320, 1fr));
+    row-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }

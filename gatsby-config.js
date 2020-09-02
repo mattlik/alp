@@ -11,6 +11,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-source-wordpress-experimental`,
+      options: {
+        url: `https://afplumbstage.wpengine.com/graphql`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-117747630-1",

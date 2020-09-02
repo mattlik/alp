@@ -15,12 +15,12 @@ export default function SubHeader() {
               </Link>
             </li>
             <li>
-              <Link to="/" className="heroBtn">
+              <Link to="/plumbing-services" className="heroBtn">
                 Plumbing Services
               </Link>
             </li>
             <li>
-              <Link to="/" className="heroBtn">
+              <Link to="/contact" className="heroBtn">
                 Contact Us
               </Link>
             </li>
