@@ -10,6 +10,11 @@
   color: #efea5d;
 }
 
+.bg-gray {
+  background: transparent linear-gradient(113deg, #454545 0%, #636363 100%) 0%
+    0% no-repeat padding-box;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;

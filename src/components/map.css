@@ -1,0 +1,14 @@
+#imgContain {
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 540px) {
+  #imgContain img,
+  #imgContain picture,
+  #imgContain .gatsby-image-wrapper {
+    width: 996px;
+    min-height: 320px;
+    max-width: 100%;
+  }
+}

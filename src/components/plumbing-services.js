@@ -1,8 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import "../components/plumbing-services.css"
-
 function Services(props) {
   return (
     <div className="additional-section bg-gray">

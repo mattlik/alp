@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Header from "../components/header"
 import SubHeader from "../components/subheader"
 import Hero from "../components/hero"
+import Offers from "../components/offers"
 import About from "../components/about"
 import Addit from "../components/additional-offers"
 import Services from "../components/plumbing-services"
@@ -18,6 +19,7 @@ const IndexPage = ({ data }) => (
     <SubHeader />
     <Hero />
     <About aboutImg={data.plumbingImage.childImageSharp.fluid} />
+    <Offers />
     <Addit />
     <Services additImg={data.plumberTools.childImageSharp.fluid} />
     <Map mapImg={data.mapImage.childImageSharp.fluid} />
@@ -28,21 +30,21 @@ export const pageQuery = graphql`
   query {
     plumberTools: file(relativePath: { eq: "plumber-tools.png" }) {
       childImageSharp {
-        fluid(maxWidth: 720, toFormat: JPG) {
+        fluid(maxWidth: 720) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     plumbingImage: file(relativePath: { eq: "plumbing-image.png" }) {
       childImageSharp {
-        fluid(maxWidth: 720, toFormat: JPG) {
+        fluid(maxWidth: 720) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mapImage: file(relativePath: { eq: "lsp-service@2x.png" }) {
       childImageSharp {
-        fluid(maxWidth: 996, toFormat: JPG) {
+        fluid(maxWidth: 996) {
           ...GatsbyImageSharpFluid
         }
       }

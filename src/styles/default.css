@@ -403,14 +403,11 @@ hr {
   border: none;
   height: 1px;
 }
-b {
-  font-weight: bold;
-}
 strong {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0.5rem;
 }
 ol li {
   padding-left: 0;
