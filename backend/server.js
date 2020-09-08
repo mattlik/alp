@@ -27,6 +27,38 @@ app.use(
     extended: true,
   })
 )
+
+var smtpTransport = nodemailer.createTransport("SMTP", {
+  service: "Gmail",
+  auth: {
+    XOAuth2: {
+      type: "OAuth2",
+      clientId:
+        "860846620224-u3tc9v51t5spe8pq7abl1aggku5gr194.apps.googleusercontent.com",
+      clientSecret: "XfgPvFa4jvWq98FsEhhsno4V",
+      resfreshToken:
+        "1//04ht9KdhdF4IQCgYIARAAGAQSNwF-L9IruLBye_xKfxO_8LIaz2Ji-IOgmj8GnQgyUe78eR5xBqry3fmK7iK28zizdPlxhKBwtic",
+    },
+  },
+})
+
+var mailOptions = {
+  from: "matt@lilikoiagency.com",
+  to: "matt@lilikoiagency.com",
+  subject: "Testing",
+  generateTextFromHTML: true,
+  html: "<h1>Hello world</h1>",
+}
+
+smtpTransport.sendMail(mailOptions, function(error, response) {
+  if (error) {
+    console.log(error)
+  } else {
+    console.log(response)
+  }
+  smtpTransport.close()
+})
+
 app.use(cors())
 app.use("/api", checkboxRoute)
 

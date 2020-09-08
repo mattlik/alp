@@ -58,6 +58,25 @@ a:hover {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+#firstSlide {
+  display: none;
+  transform: translateX(-100%) scale(0.9);
+  transition: all 500ms linear;
+}
+#secondSlide {
+  display: none;
+  transform: translateX(100%) scale(0.9);
+  transition: all 500ms linear;
+}
+#firstSlide.showing {
+  display: block;
+  transform: translateX(0) scale(1);
+}
+#secondSlide.showing {
+  display: block;
+  transform: translateX(0) scale(1);
+}
+
 .container {
   width: 996px;
   max-width: 100%;

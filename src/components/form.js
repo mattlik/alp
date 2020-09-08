@@ -27,8 +27,8 @@ class Form extends React.Component {
   onNext(event) {
     const slideOne = document.getElementById("firstSlide")
     const slideTwo = document.getElementById("secondSlide")
-    slideOne.style.display = "none"
-    slideTwo.style.display = "block"
+    slideOne.classList.remove("showing")
+    slideTwo.classList.add("showing")
   }
   handleChange(event) {
     this.setState({ plumbingIssue: event.target.value })
@@ -64,7 +64,7 @@ class Form extends React.Component {
       .post("/api/form-save", formData)
       .then(res => {
         console.log(res.data)
-        window.location = "/thankyou"
+        window.location = "/thank-you"
       })
       .catch(error => {
         console.log(error)
@@ -111,7 +111,7 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <div id="firstSlide">
+        <div id="firstSlide" className="showing">
           <h2 className="text-center">
             What type of plumbing project is this?
           </h2>
@@ -191,7 +191,7 @@ class Form extends React.Component {
             ></input>
           </div>
         </div>
-        <div id="secondSlide" style={{ display: `none` }}>
+        <div id="secondSlide">
           <div className="inputField">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name"></input>

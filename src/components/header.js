@@ -24,7 +24,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="pageHeader--Phone">
-          <Link to="tel:18189276188">(818) 927-6188</Link>
+          <a href="tel:18189276188">(818) 927-6188</a>
         </div>
       </div>
     </header>

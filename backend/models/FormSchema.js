@@ -15,6 +15,7 @@ const formSchema = new Schema(
     },
     zip: {
       type: Number,
+      required: true,
     },
     email: {
       type: String,
